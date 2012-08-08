@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+
+    <TextView
+        android:id="@+id/welcome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="250dp"
+        android:layout_marginTop="150dp"
+        android:text="@string/welcome"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textSize="72sp"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/welcome_trait"
+        android:layout_below="@+id/welcome"
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:layout_marginLeft="200dp"
+        android:layout_marginRight="200dp"
+        android:background="@android:color/background_dark"
+        />
+
+    <Button
+        android:id="@+id/welcome_ignore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/welcome_trait"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="45dp"
+        android:text="@string/ignore"
+        android:textSize="24sp"
+        
+         />
+
+    <Button
+        android:id="@+id/welcome_next"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/welcome_ignore"
+        android:layout_alignRight="@+id/welcome_trait"
+        android:text="@string/next"
+        android:textSize="24sp"
+        
+         />
+
+
+    <TextView
+        android:id="@+id/welcome_description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/welcome_next"
+        android:layout_marginBottom="100dp"
+        android:layout_toLeftOf="@+id/welcome_next"
+        android:layout_toRightOf="@+id/welcome_ignore"
+        android:text="@string/welcome_description"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textSize="36sp" />
+
+</RelativeLayout>

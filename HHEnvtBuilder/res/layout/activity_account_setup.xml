@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".controllers.SetupAccountActivity" >
+
+    <TextView
+        android:id="@+id/user_input_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="250dp"
+        android:layout_marginTop="150dp"
+        android:text="@string/user_first_input"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textSize="36sp" />
+
+    <EditText
+        android:id="@+id/user_input_edittext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/user_input_textview"
+        android:layout_alignRight="@+id/user_input_textview"
+        android:layout_below="@+id/user_input_textview"
+        android:hint="@string/user_input_hint"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textSize="36sp"
+        android:singleLine="true"
+         />
+
+    <TextView
+        android:id="@+id/options_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/user_input_textview"
+        android:layout_below="@+id/user_input_edittext"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/options"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textSize="36sp" />
+
+    <TextView
+        android:id="@+id/password_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/user_input_textview"
+        android:layout_below="@+id/options_textview"
+        android:minLines="2"
+        android:singleLine="false"
+        android:text="@string/password_user_input"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textSize="24sp" />
+
+    <ImageView
+        android:id="@+id/user_input_bar"
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:layout_above="@+id/user_input_ignore"
+        android:layout_margin="50dp"
+        android:background="@android:color/black" />
+
+    <Button
+        android:id="@+id/user_input_ignore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="45dp"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@+id/user_input_previous"
+        
+        android:text="@string/ignore"
+        android:textSize="24sp" />
+
+    <Button
+        android:id="@+id/user_input_previous"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/user_input_textview"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="45dp"
+        
+        android:text="@string/previous"
+        android:textSize="24sp" />
+
+    <Button
+        android:id="@+id/user_input_next"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/user_input_ignore"
+        android:layout_alignRight="@+id/user_input_textview"
+        android:text="@string/next"
+        android:textSize="24sp" />
+
+    <Button
+        android:id="@+id/add_password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/password_textview"
+        android:layout_alignBottom="@+id/password_textview"
+        android:layout_marginLeft="50dp"
+        android:layout_toRightOf="@+id/password_textview"
+        android:text="@string/add"
+        android:textSize="24sp" />
+
+    <CheckBox
+        android:id="@+id/parental_control"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/password_textview"
+        android:layout_below="@+id/password_textview"
+        android:text="@string/parental_control"
+        android:textSize="24sp" />
+
+    <CheckBox
+        android:id="@+id/text_size"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/parental_control"
+        android:layout_below="@+id/parental_control"
+        android:text="@string/text_size"
+        android:textSize="24sp" />
+
+</RelativeLayout>

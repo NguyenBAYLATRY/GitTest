@@ -1,0 +1,23 @@
+<resources>
+
+    <string name="app_name">EnvtBuilder</string>
+    <string name="menu_settings">Settings</string>
+    <string name="title_activity_welcome">Bienvenue!</string>
+    <string name="welcome">Bienvenue</string>
+    <string name="welcome_description">Pour commencer votre voyage, nous allons vous poser quelques questions pour vous aider à configurer votre tablette.</string>
+    <string name="ignore">Ignorer</string>
+    <string name="next">Suivant</string>
+    <string name="user_first_input">Entrez le nom du premier utilisateur :</string>
+    <string name="user_input">Entrez le nom du nouvel utilisateur :</string>
+    <string name="user_input_hint">Ex. : Julien, Maman, Famille etc.</string>
+    <string name="options">Options :</string>
+    <string name="previous">Précédent</string>
+    <string name="password_user_input">Ajouter un mot de passe pour cet utilisateur uniquement :</string>
+    <string name="add">Ajouter</string>
+    <string name="parental_control">Contrôle parental, à activer sur le compte enfant.</string>
+    <string name="text_size">Augmenter la taille du texte pour ce compte.</string>
+    <string name="input_password">Choisir un mot de passe :</string>
+    <string name="confirm_password">Retapez votre mot de passe :</string>
+    <string name="ok">OK</string>
+
+</resources>
