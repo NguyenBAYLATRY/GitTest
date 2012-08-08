@@ -13,7 +13,7 @@ import com.hubee.hh.launchertablet.envtbuilder.R;
 
 public class WelcomeActivity extends Activity {
 	private Button ignore, next;
-
+// salut je suis carole
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
