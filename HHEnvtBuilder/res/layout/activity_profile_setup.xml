@@ -3,111 +3,170 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent" >
 
-    <TabHost
-        android:id="@android:id/tabhost"
+    <RadioGroup
+        android:id="@+id/age_chooser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="100dp"
+        android:orientation="horizontal" >
+
+        <ToggleButton
+            android:id="@+id/age_chooser_child"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onToggle"
+            android:textOff="@string/child"
+            android:textOn="@string/child" />
+
+        <ToggleButton
+            android:id="@+id/age_chooser_teen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onToggle"
+            android:textOff="@string/teen"
+            android:textOn="@string/teen" />
+
+        <ToggleButton
+            android:id="@+id/age_chooser_adult"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onToggle"
+            android:textOff="@string/adult"
+            android:textOn="@string/adult" />
+    </RadioGroup>
+
+    <RadioGroup
+        android:id="@+id/occupation_chooser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/age_chooser"
+        android:layout_marginLeft="100dp"
+        android:orientation="horizontal" >
+
+        <ToggleButton
+            android:id="@+id/occupation_chooser_student"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onToggle"
+            android:textOff="@string/student"
+            android:textOn="@string/student" />
+
+        <ToggleButton
+            android:id="@+id/occupation_chooser_worker"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onToggle"
+            android:textOff="@string/worker"
+            android:textOn="@string/worker" />
+
+        <ToggleButton
+            android:id="@+id/occupation_chooser_jobless"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onToggle"
+            android:textOff="@string/jobless"
+            android:textOn="@string/jobless" />
+
+        <ToggleButton
+            android:id="@+id/occupation_chooser_entrepreneur"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onToggle"
+            android:textOff="@string/entrepreneur"
+            android:textOn="@string/entrepreneur" />
+
+        <ToggleButton
+            android:id="@+id/occupation_chooser_housewife"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onToggle"
+            android:textOff="@string/housewife"
+            android:textOn="@string/housewife" />
+
+        <ToggleButton
+            android:id="@+id/occupation_chooser_househusband"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onToggle"
+            android:textOff="@string/househusband"
+            android:textOn="@string/househusband" />
+
+        <ToggleButton
+            android:id="@+id/occupation_chooser_retired"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onToggle"
+            android:textOff="@string/retired"
+            android:textOn="@string/retired" />
+    </RadioGroup>
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true" >
+        android:layout_above="@+id/setup_profile_bar"
+        android:layout_below="@+id/occupation_chooser"
+        android:layout_marginLeft="120dp"
+        android:orientation="horizontal" >
 
-        <LinearLayout
-            android:layout_width="match_parent"
+        <fragment
+            android:id="@+id/app_chooser_fragment"
+            android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:orientation="vertical" >
+            android:layout_weight="65"
+            class="com.hubee.hh.launchertablet.envtbuilder.fragments.SetupProfileAppFragment"
+             >
+        </fragment>
 
-            <TabWidget
-                android:id="@android:id/tabs"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" >
-            </TabWidget>
+        <fragment
+            android:id="@+id/app_detail_fragment"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="35"
+            class="com.hubee.hh.launchertablet.envtbuilder.fragments.SetupProfileDetailFragment"
+             >
+        </fragment>
+    </LinearLayout>
 
-            <FrameLayout
-                android:id="@android:id/tabcontent"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent" >
+    <ImageView
+        android:id="@+id/setup_profile_bar"
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:layout_above="@+id/user_input_ignore"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="100dp"
+        android:layout_marginRight="100dp"
+        android:background="@android:color/black" />
 
-                <LinearLayout
-                    android:id="@+id/tab1"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent" >
+    <Button
+        android:id="@+id/user_input_ignore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="45dp"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@+id/user_input_previous"
+        android:text="@string/ignore"
+        android:textSize="24sp" />
 
-                    <TabHost
-                        android:id="@android:id/tabhost"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1" >
+    <Button
+        android:id="@+id/user_input_previous"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/setup_profile_bar"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="45dp"
+        android:text="@string/previous"
+        android:textSize="24sp" />
 
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:orientation="vertical" >
-
-                            <TabWidget
-                                android:id="@android:id/tabs"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content" >
-                            </TabWidget>
-
-                            <FrameLayout
-                                android:id="@android:id/tabcontent"
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent" >
-
-                                <LinearLayout
-                                    android:id="@+id/tab_student"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="match_parent" >
-                                </LinearLayout>
-
-                                <LinearLayout
-                                    android:id="@+id/tab_worker"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="match_parent" >
-                                </LinearLayout>
-								<LinearLayout
-                                    android:id="@+id/tab_unemployed"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="match_parent" >
-                                </LinearLayout>²
-                                <LinearLayout
-                                    android:id="@+id/tab_entrepreneur"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="match_parent" >
-                                </LinearLayout>
-                                <LinearLayout
-                                    android:id="@+id/tab_housewife"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="match_parent" >
-                                </LinearLayout>
-                                <LinearLayout
-                                    android:id="@+id/tab_househusband"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="match_parent" >
-                                </LinearLayout>
-                                <LinearLayout
-                                    android:id="@+id/tab_retired"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="match_parent" >
-                                </LinearLayout>
-                            </FrameLayout>
-                        </LinearLayout>
-                    </TabHost>
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/tab2"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent" >
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/tab3"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent" >
-                </LinearLayout>
-            </FrameLayout>
-        </LinearLayout>
-    </TabHost>
+    <Button
+        android:id="@+id/user_input_next"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignRight="@+id/setup_profile_bar"
+        android:layout_marginBottom="45dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/next"
+        android:textSize="24sp" />
 
 </RelativeLayout>

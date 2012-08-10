@@ -59,7 +59,9 @@
         android:layout_width="match_parent"
         android:layout_height="3dp"
         android:layout_above="@+id/user_input_ignore"
-        android:layout_margin="50dp"
+        android:layout_marginLeft="100dp"
+        android:layout_marginRight="100dp"
+        android:layout_marginBottom="20dp"
         android:background="@android:color/black" />
 
     <Button
@@ -78,20 +80,11 @@
         android:id="@+id/user_input_previous"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/user_input_textview"
+        android:layout_alignLeft="@+id/user_input_bar"
         android:layout_alignParentBottom="true"
         android:layout_marginBottom="45dp"
         
         android:text="@string/previous"
-        android:textSize="24sp" />
-
-    <Button
-        android:id="@+id/user_input_next"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/user_input_ignore"
-        android:layout_alignRight="@+id/user_input_textview"
-        android:text="@string/next"
         android:textSize="24sp" />
 
     <Button
@@ -121,6 +114,17 @@
         android:layout_alignLeft="@+id/parental_control"
         android:layout_below="@+id/parental_control"
         android:text="@string/text_size"
+        android:textSize="24sp" />
+
+    <Button
+        android:id="@+id/user_input_next"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_alignRight="@+id/user_input_bar"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="45dp"
+        android:text="@string/next"
         android:textSize="24sp" />
 
 </RelativeLayout>

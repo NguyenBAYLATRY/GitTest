@@ -1,5 +1,15 @@
 <resources>
 
     <style name="AppTheme" parent="android:Theme.Dialog" />
+    <style name="Shadow">
+    <item name="android:paddingLeft">4dp</item>
+    <item name="android:paddingBottom">4dp</item>
+    <item name="android:textColor">#ffffff</item>
+    <item name="android:textSize">12sp</item>
+    <item name="android:shadowColor">#000000</item>
+    <item name="android:shadowDx">2</item>
+    <item name="android:shadowDy">2</item>
+    <item name="android:shadowRadius">2</item>
+  </style>
 
 </resources>
