@@ -14,7 +14,7 @@
             android:id="@+id/age_chooser_child"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:onClick="onToggle"
+            android:onClick="onToggleAge"
             android:textOff="@string/child"
             android:textOn="@string/child" />
 
@@ -22,7 +22,7 @@
             android:id="@+id/age_chooser_teen"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:onClick="onToggle"
+            android:onClick="onToggleAge"
             android:textOff="@string/teen"
             android:textOn="@string/teen" />
 
@@ -30,7 +30,7 @@
             android:id="@+id/age_chooser_adult"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:onClick="onToggle"
+            android:onClick="onToggleAge"
             android:textOff="@string/adult"
             android:textOn="@string/adult" />
     </RadioGroup>
@@ -47,7 +47,7 @@
             android:id="@+id/occupation_chooser_student"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:onClick="onToggle"
+            android:onClick="onToggleOccupation"
             android:textOff="@string/student"
             android:textOn="@string/student" />
 
@@ -55,23 +55,15 @@
             android:id="@+id/occupation_chooser_worker"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:onClick="onToggle"
+            android:onClick="onToggleOccupation"
             android:textOff="@string/worker"
             android:textOn="@string/worker" />
-
-        <ToggleButton
-            android:id="@+id/occupation_chooser_jobless"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:onClick="onToggle"
-            android:textOff="@string/jobless"
-            android:textOn="@string/jobless" />
 
         <ToggleButton
             android:id="@+id/occupation_chooser_entrepreneur"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:onClick="onToggle"
+            android:onClick="onToggleOccupation"
             android:textOff="@string/entrepreneur"
             android:textOn="@string/entrepreneur" />
 
@@ -79,7 +71,7 @@
             android:id="@+id/occupation_chooser_housewife"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:onClick="onToggle"
+            android:onClick="onToggleOccupation"
             android:textOff="@string/housewife"
             android:textOn="@string/housewife" />
 
@@ -87,7 +79,7 @@
             android:id="@+id/occupation_chooser_househusband"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:onClick="onToggle"
+            android:onClick="onToggleOccupation"
             android:textOff="@string/househusband"
             android:textOn="@string/househusband" />
 
@@ -95,9 +87,17 @@
             android:id="@+id/occupation_chooser_retired"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:onClick="onToggle"
+            android:onClick="onToggleOccupation"
             android:textOff="@string/retired"
             android:textOn="@string/retired" />
+
+        <ToggleButton
+            android:id="@+id/occupation_chooser_jobless"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onToggleOccupation"
+            android:textOff="@string/jobless"
+            android:textOn="@string/jobless" />
     </RadioGroup>
 
     <LinearLayout
@@ -113,8 +113,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="65"
-            class="com.hubee.hh.launchertablet.envtbuilder.fragments.SetupProfileAppFragment"
-             >
+            class="com.hubee.hh.launchertablet.envtbuilder.fragments.SetupProfileAppFragment" >
         </fragment>
 
         <fragment
@@ -122,8 +121,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="35"
-            class="com.hubee.hh.launchertablet.envtbuilder.fragments.SetupProfileDetailFragment"
-             >
+            class="com.hubee.hh.launchertablet.envtbuilder.fragments.SetupProfileDetailFragment" >
         </fragment>
     </LinearLayout>
 

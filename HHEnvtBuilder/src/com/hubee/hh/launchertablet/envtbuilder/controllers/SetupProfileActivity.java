@@ -35,7 +35,11 @@ public class SetupProfileActivity extends FragmentActivity {
 		}
 	};
 
-	public void onToggle(View view) {
+	public void onToggleAge(View view) {
+	    ((RadioGroup)view.getParent()).check(view.getId());
+	    // app specific stuff ..
+	}
+	public void onToggleOccupation(View view) {
 	    ((RadioGroup)view.getParent()).check(view.getId());
 	    // app specific stuff ..
 	}
